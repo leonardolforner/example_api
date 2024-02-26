@@ -13,7 +13,7 @@ func main() {
 
 	server := &http.Server{
 		Addr:    ":8080",
-		Handler: http.HandlerFunc(basicHandler),
+		Handler: router,
 	}
 	err := server.ListenAndServe()
 	if err != nil {
